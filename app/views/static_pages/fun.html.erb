@@ -1,3 +1,99 @@
-<h1>StaticPages#living</h1>
-<p>Find me in app/views/static_pages/living.html.erb</p>
-<h2>Second level FUN header</h2>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon"
+          type="image/png"
+          href="./resources/favicon.jpg">
+    <title>Fun</title>
+
+    <link href="styles/my-style.css" rel="stylesheet"/>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/my-js.js"></script>
+
+  </head>
+  <body>
+
+
+    <div id="nav-bar-holder">
+      <span class="nav-item">
+        <a href="/static_pages/home" rel="" id="anchor1" class="no-color">Our Town</a>
+      </span>
+      <span class="nav-item">
+        <a href="/static_pages/jobs" class="no-color">Jobs</a>
+      </span>
+      <span class="nav-item">
+        <a href="/static_pages/living" class="no-color">Living</a>
+      </span>
+      <span class="nav-item">
+        <a href="/static_pages/fun" class="no-color">Fun</a>
+      </span>
+    </div>
+
+
+    <p>
+      <div id="one-product-area">
+        <!-- <a href="index.html" class="product&#45;item"><img src="resources/green.jpg"></a> -->
+        <!-- <a href="index.html" class="product&#45;item"><img src="resources/yellow.jpg"></a> -->
+        <%= link_to(image_tag('bar.jpg', :class => "info-item", :size => "700x700"), "/static_pages/fun") %>
+        <div id="one-product-header" class="big">
+          Bars
+        </div>
+        <div id="one-product-content-holder">
+          Enjoy our numerous bars located downtown, our Happy Hour's will amaze you!
+        </div>
+      </div>
+
+      <div id="one-product-area">
+        <!-- <a href="index.html" class="product&#45;item"><img src="resources/green.jpg"></a> -->
+        <!-- <a href="index.html" class="product&#45;item"><img src="resources/yellow.jpg"></a> -->
+        <%= link_to(image_tag('arcade.jpg', :class => "info-item", :size => "700x700"), "/static_pages/fun") %>
+        <div id="one-product-header" class="big">
+          Arcade
+        </div>
+        <div id="one-product-content-holder">
+          Have fun at our 24/7 arcades
+        </div>
+      </div>
+
+      <div id="one-product-area">
+        <!-- <a href="index.html" class="product&#45;item"><img src="resources/green.jpg"></a> -->
+        <!-- <a href="index.html" class="product&#45;item"><img src="resources/yellow.jpg"></a> -->
+        <%= link_to(image_tag('park.jpg', :class => "info-item", :size => "700x700"), "/static_pages/fun") %>
+        <div id="one-product-header" class="big">
+          Park
+        </div>
+        <div id="one-product-content-holder">
+          Enjoy our lush park, filled with bike paths and open fields!
+        </div>
+      </div>
+    </p>
+
+
+    <div id="footer">
+      
+      <div id="footer-text">
+        <span>Welcome to the footer!  Don't step on a Lego!</span>
+        <!-- <a href="./index.html" class="no&#45;color">sometimes... I can feel you in motion</a> -->
+      </div>
+    </div>
+
+
+  <script>
+    $('a').click(function(){
+        $('html, body').animate({
+            scrollTop: $( $(this).attr('href') ).offset().top
+        }, 500);
+        return false;
+    });
+  </script>
+
+
+
+
+    </div>
+
+  </body>
+</html>
